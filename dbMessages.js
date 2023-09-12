@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const WhatsappSchema = mongoose.Schema({
     message: String,
     name: String,
-    timestamp: String,
+    date: {type: Date, default: Date.now},
     received: Boolean
 });
 

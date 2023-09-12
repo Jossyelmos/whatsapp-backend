@@ -5,8 +5,11 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "whatsapp-mern": "npm start --prefix whatsapp-mern",
+    "whatsapp-merninstall": "npm install --prefix whatsapp-mern",
+    "dev": "concurrently \"npm run server\" \"npm run whatsapp-mern\""
   },
   "author": "Jossy Amos",
   "license": "ISC",
@@ -16,5 +19,8 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.2.1",
     "pusher": "^5.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
